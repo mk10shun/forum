@@ -7,16 +7,19 @@ Vue.use(VueRouter)
 // These can be imported from other files
 // const Foo = { template: '<div>foo</div>' }
 // const Bar = { template: '<div>bar</div>' }
+import Login from '../components/login/Login'
 
 const routes = [
-  // { path: '/login', component: Login },
+  { path: '/login', component: Login },
 ]
 
 // 3. Create the router instance and pass the `routes` option
 // You can pass in additional options here, but let's
 // keep it simple for now.
 const router = new VueRouter({
-  routes // short for `routes: routes`
+  routes, // short for `routes: routes`,
+  hashbang: false,
+  mode: 'history'
 })
 
 // 4. Create and mount the root instance.
