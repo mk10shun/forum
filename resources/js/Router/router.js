@@ -8,9 +8,15 @@ Vue.use(VueRouter)
 // const Foo = { template: '<div>foo</div>' }
 // const Bar = { template: '<div>bar</div>' }
 import Login from '../components/login/Login'
+import Signup from '../components/login/Signup'
+import Forum from '../components/forum/Forum'
+import Logout from '../components/login/Logout'
 
 const routes = [
   { path: '/login', component: Login },
+  { path: '/logout', component: Logout},
+  { path: '/signup', component: Signup },
+  { path: '/forum', component: Forum, name: 'forum'}
 ]
 
 // 3. Create the router instance and pass the `routes` option
